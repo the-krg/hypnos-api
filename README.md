@@ -1,24 +1,13 @@
-# README
+# Hypnos API
+Rails 6.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto referente ao Trabalho de Conclusão de Curso(TCC) dos alunos:
+* Enzo Vinicius Haguiwara
+* Paulo Eduardo Gigonis Tedesco
 
-Things you may want to cover:
+#### Universidade Federal do Paraná
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Nomenclatura de Branch
+* `core/nome-da-branch` => Referente ao desenvolvimento essencial do projeto
+* `fix/nome-da-branch` => Correção de erros e bugs
+* `quality/nome-da-branch` => Refactor
