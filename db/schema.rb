@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_10_02_225439) do
   enable_extension "plpgsql"
 
   create_table "days", force: :cascade do |t|
+    t.bigint "user_id"
     t.integer "quality"
     t.boolean "different"
     t.boolean "exercised"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_10_02_225439) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_days_on_user_id"
   end
 
   create_table "jwt_blacklists", force: :cascade do |t|
@@ -32,10 +34,16 @@ ActiveRecord::Schema.define(version: 2019_10_02_225439) do
   end
 
   create_table "nights", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "sleep_hour"
+    t.datetime "wake_hour"
     t.integer "quality"
-    t.boolean "different"
+    t.boolean "ill"
+    t.text "description"
+    t.text "dream"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_nights_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

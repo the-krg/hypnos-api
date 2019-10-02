@@ -1,9 +1,12 @@
 class CreateDays < ActiveRecord::Migration[6.0]
   def change
     create_table :days do |t|
-      t.datetime :sleep_hour
-      t.datetime :wake_hour
+      t.belongs_to :user, index: true
+
       t.integer :quality
+      t.boolean :different
+      t.boolean :exercised
+      t.boolean :exercise_intensity
       t.boolean :ill
       t.text :description
 

@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   validates :username, uniqueness: true
 
+  has_many :days
+  has_many :nights
+
   private
 
   def sign_up_params
